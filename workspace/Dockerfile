@@ -95,6 +95,9 @@ RUN if [ ${COMPOSER_GLOBAL_INSTALL} = true ]; then \
 RUN echo "" >> ~/.bashrc && \
 echo 'export PATH="~/.composer/vendor/bin:$PATH"' >> ~/.bashrc
 
+# Change to phpcomposer
+RUN composer config -g repo.packagist composer https://packagist.phpcomposer.com
+
 #####################################
 # Crontab
 #####################################
