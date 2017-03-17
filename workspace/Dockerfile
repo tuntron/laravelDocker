@@ -207,8 +207,7 @@ RUN if [ ${INSTALL_NODE} = true ]; then \
         nvm use ${NODE_VERSION} && \
         nvm alias ${NODE_VERSION} && \
         #npm install -g gulp bower vue-cli && \
-        npm install forever -g && \
-        forever start /var/www/nodeserver/websocket.js \
+        npm install forever -g \
 ;fi
 
 # Wouldn't execute when added to the RUN statement in the above block
@@ -411,3 +410,7 @@ RUN apt-get clean && \
 
 # Set default work directory
 WORKDIR /var/www
+
+CMD if [ ${INSTALL_NODE} = true ]; then \
+    forever start /var/www/nodeserver/websocket.js \
+;fi
