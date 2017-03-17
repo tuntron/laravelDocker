@@ -200,11 +200,14 @@ RUN if [ ${INSTALL_NODE} = true ]; then \
     # Install nvm (A Node Version Manager)
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash && \
         . $NVM_DIR/nvm.sh && \
+        export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node && \
+        source ~/.zshrc && \
+        echo $NVM_NODEJS_ORG_MIRROR && \
         nvm install ${NODE_VERSION} && \
         nvm use ${NODE_VERSION} && \
         nvm alias ${NODE_VERSION} && \
-        npm install -g gulp bower vue-cli \
-        npm install forever -g \
+        npm install -g gulp bower vue-cli && \
+        npm install forever -g && \
         forever start nodeserver/websocket.js \
 ;fi
 
