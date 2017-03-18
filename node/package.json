@@ -1,0 +1,16 @@
+{
+  "name": "websocket",
+  "version": "0.0.1",
+  "description": "Node.js on Docker",
+  "author": "Cc",
+  "main": "websocket.js",
+  "scripts": {
+    "start": "node /var/www/nodeserver/websocket.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "mysql":"",
+    "ioredis":"",
+    "socket.io":""
+  }
+}
