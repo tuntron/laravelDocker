@@ -32,11 +32,11 @@ RUN curl -SLO "http://npm.taobao.org/mirrors/node/v$NODE_VERSION/node-v$NODE_VER
 
 WORKDIR /var/www/nodeserver
 
-RUN  npm install socket.io --registry=https://registry.npm.taobao.org
-RUN  npm install mysql --registry=https://registry.npm.taobao.org
-RUN  npm install ioredis --registry=https://registry.npm.taobao.org
+#RUN  npm install socket.io --registry=https://registry.npm.taobao.org
+#RUN  npm install mysql --registry=https://registry.npm.taobao.org
+#RUN  npm install ioredis --registry=https://registry.npm.taobao.org
 
-#RUN npm install --registry=https://registry.npm.taobao.org
+RUN npm install --registry=https://registry.npm.taobao.org
 
 CMD ["npm", "start"]
 
