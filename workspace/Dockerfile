@@ -410,7 +410,3 @@ RUN apt-get clean && \
 
 # Set default work directory
 WORKDIR /var/www
-
-CMD if [ ${INSTALL_NODE} = true ]; then \
-    forever start /var/www/nodeserver/websocket.js \
-;fi
