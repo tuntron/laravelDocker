@@ -32,8 +32,8 @@ RUN curl -SLO "http://npm.taobao.org/mirrors/node/v$NODE_VERSION/node-v$NODE_VER
 
 RUN  npm install forever -g
 
-CMD [ "node" ]
-
-CMD forever start /var/www/nodeserver/websocket.js
+CMD node /var/www/nodeserver/websocket.js
 
 EXPOSE 8000
+
+CMD [ "node" ]
