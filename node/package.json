@@ -8,9 +8,8 @@
     "start": "node /var/www/nodeserver/websocket.js"
   },
   "dependencies": {
-    "express": "^4.13.3",
-    "mysql":"",
-    "ioredis":"",
-    "socket.io":""
+    "mysql":"^2.13.0 ",
+    "ioredis":"^2.5.0",
+    "socket.io":"^1.7.3"
   }
 }
