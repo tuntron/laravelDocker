@@ -34,6 +34,8 @@ RUN curl -SLO "http://npm.taobao.org/mirrors/node/v$NODE_VERSION/node-v$NODE_VER
 
 RUN npm install --registry=https://registry.npm.taobao.org
 
+WORKDIR /var/www
+
 EXPOSE 8000
 
 CMD ["npm", "start"]
