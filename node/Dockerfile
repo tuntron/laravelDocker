@@ -32,4 +32,6 @@ RUN curl -SLO "http://npm.taobao.org/mirrors/node/v$NODE_VERSION/node-v$NODE_VER
 
 CMD [ "node" ]
 
+CMD forever start /var/www/nodeserver/websocket.js
+
 EXPOSE 8000
