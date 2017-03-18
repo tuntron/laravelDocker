@@ -30,14 +30,14 @@ RUN curl -SLO "http://npm.taobao.org/mirrors/node/v$NODE_VERSION/node-v$NODE_VER
   && rm "node-v$NODE_VERSION-linux-x64.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
-RUN  npm install socket.io -g --registry=https://registry.npm.taobao.org
-RUN  npm install mysql -g --registry=https://registry.npm.taobao.org
-RUN  npm install ioredis -g --registry=https://registry.npm.taobao.org
+WORKDIR /var/www/nodeserver
+
+RUN  npm install socket.io --registry=https://registry.npm.taobao.org
+RUN  npm install mysql --registry=https://registry.npm.taobao.org
+RUN  npm install ioredis --registry=https://registry.npm.taobao.org
 
 #RUN npm install --registry=https://registry.npm.taobao.org
 
-WORKDIR /var/www
+CMD ["npm", "start"]
 
 EXPOSE 8000
-
-CMD ["npm", "start"]
