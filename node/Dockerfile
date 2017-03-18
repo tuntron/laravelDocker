@@ -10,13 +10,15 @@ RUN curl -SLO "http://npm.taobao.org/mirrors/node/v$NODE_VERSION/node-v$NODE_VER
   && tar -xJf "node-v$NODE_VERSION-linux-x64.tar.xz" -C /usr/local --strip-components=1 \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
-WORKDIR /var/www/nodeserver
+ADD ./package.json ./
 
 #RUN  npm install socket.io --registry=https://registry.npm.taobao.org
 #RUN  npm install mysql --registry=https://registry.npm.taobao.org
 #RUN  npm install ioredis --registry=https://registry.npm.taobao.org
 
 RUN npm install --registry=https://registry.npm.taobao.org
+
+WORKDIR /var/www/nodeserver
 
 CMD ["npm", "start"]
 
