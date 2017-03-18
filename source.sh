@@ -22,14 +22,14 @@ else
     exit 0
 fi
 
-echo "deb http://mirrors.aliyuncs.com/ubuntu/ $RELEASE main restricted universe multiverse
-deb http://mirrors.aliyuncs.com/ubuntu/ $RELEASE-security main restricted universe multiverse
-deb http://mirrors.aliyuncs.com/ubuntu/ $RELEASE-updates main restricted universe multiverse
-deb http://mirrors.aliyuncs.com/ubuntu/ $RELEASE-proposed main restricted universe multiverse
-deb http://mirrors.aliyuncs.com/ubuntu/ $RELEASE-backports main restricted universe multiverse
-deb-src http://mirrors.aliyuncs.com/ubuntu/ $RELEASE main restricted universe multiverse
-deb-src http://mirrors.aliyuncs.com/ubuntu/ $RELEASE-security main restricted universe multiverse
-deb-src http://mirrors.aliyuncs.com/ubuntu/ $RELEASE-updates main restricted universe multiverse
-deb-src http://mirrors.aliyuncs.com/ubuntu/ $RELEASE-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyuncs.com/ubuntu/ $RELEASE-backports main restricted universe multiverse" > $APT_DIR/sources.list
+echo "deb http://mirrors.cloud.aliyuncs.com/ubuntu/ $RELEASE main restricted universe multiverse
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ $RELEASE-security main restricted universe multiverse
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ $RELEASE-updates main restricted universe multiverse
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ $RELEASE-proposed main restricted universe multiverse
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ $RELEASE-backports main restricted universe multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ $RELEASE main restricted universe multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ $RELEASE-security main restricted universe multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ $RELEASE-updates main restricted universe multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ $RELEASE-proposed main restricted universe multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ $RELEASE-backports main restricted universe multiverse" > $APT_DIR/sources.list
 echo "Change sources.list sucessfully"
