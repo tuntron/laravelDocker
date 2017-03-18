@@ -93,6 +93,19 @@ services:
         links:
             - php-fpm
 
+### NODE Server Container ##################################
+
+    node:
+        build: ./node
+        volumes_from:
+            - applications
+        #volumes:
+        #    - ./node/websocket/:/var/www/websocket/
+        ports:
+            - "8000:8000"
+        links:
+            - workspace
+
 ### HHVM Container ##########################################
 
     hhvm:
