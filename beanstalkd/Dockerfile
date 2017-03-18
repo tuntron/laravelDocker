@@ -5,7 +5,7 @@ MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
 ENV DEBIAN_FRONTEND noninteractive
 ENV PATH /usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-ADD ../source.sh ./
+ADD ./source.sh ./
 
 RUN sh source.sh
 
