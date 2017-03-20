@@ -58,7 +58,7 @@ ENV INSTALL_SOAP ${INSTALL_SOAP}
 
 RUN if [ ${INSTALL_SOAP} = true ]; then \
   # Install the PHP SOAP extension
-  apt-get -y update && \
+      apt-get -y update && \
   add-apt-repository -y ppa:ondrej/php && \
   apt-get -y install libxml2-dev php7.0-soap && \
   echo "extension=soap.so" >> /etc/php/7.0/cli/conf.d/40-soap.ini \
@@ -404,6 +404,7 @@ USER laradock
 USER root
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
 # Set default work directory
 WORKDIR /var/www
+CMD ["sh", "init.sh"]
+
